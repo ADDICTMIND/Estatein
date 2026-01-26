@@ -1,0 +1,24 @@
+@use '../helpers/' as *;
+
+.footer {
+    &__body {
+        display: grid;
+        grid-template-columns: 33.7% auto;
+        column-gap: rem(30);
+        padding-block: rem(100);
+    }
+
+    &__home {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: rem(30);
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        column-gap: rem(100.25);
+    }
+}

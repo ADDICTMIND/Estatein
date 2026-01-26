@@ -1,0 +1,24 @@
+@use '../helpers/' as *;
+
+.input {
+    padding: rem(18) rem(24);
+    background-color: transparent;
+    border: var(--border);
+    color: var(--color-light);
+    border-radius: rem(12);
+    
+
+    &::placeholder {
+        color: var(--color-grey);
+        font-size: rem(18);
+        background-image: url('../../icons/envelope-email-input_grey.svg');
+    }
+
+    @include laptop {
+        padding: rem(14) rem(20);
+        border-radius: rem(8);
+    }
+}
+
+//Доделать input
+//Добавить область нажатия для бургер кнопки

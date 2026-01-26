@@ -1,0 +1,44 @@
+@use '../helpers/' as *;
+
+.close-button {
+    --size: #{rem(34)};
+
+    @include square(var(--size));
+
+
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: rem(10);
+    color: var(--color-light);
+    background-color: var(--color-grey-30);
+    border: none;
+    opacity: 0.6;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    @include laptop {
+        padding: rem(7);
+    }
+
+    @include tablet {
+        --size: #{rem(26)};
+    }
+
+    &__line {
+        width: 100%;
+        height: rem(2);
+        background-color: var(--color-light);
+        border-radius: 1rem;
+        
+        &:first-child {
+            rotate: 45deg;
+            translate: 0 100%;
+        }        
+
+        &:last-child {
+            rotate: -45deg;
+        }
+    }
+}
