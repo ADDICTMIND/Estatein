@@ -1,24 +1,52 @@
 @use '../helpers/' as *;
 
 .input {
-    padding: rem(18) rem(24);
+    width: 100%;
+    max-width: rem(423);
+    padding: rem(18) rem(64) rem(18) rem(34);
     background-color: transparent;
     border: var(--border);
     color: var(--color-light);
     border-radius: rem(12);
-    
+    padding-left: rem(50);
+    background-image: url('../../icons/envelope-email-input_grey.svg');
+    background-repeat: no-repeat;
+    background-position: rem(16) center;
+    background-size: rem(24);
 
     &::placeholder {
         color: var(--color-grey);
         font-size: rem(18);
-        background-image: url('../../icons/envelope-email-input_grey.svg');
+
+        @include laptop {
+            font-size: rem(14);
+            padding-left: rem(20);
+        }
     }
 
     @include laptop {
-        padding: rem(14) rem(20);
+        padding: rem(14) rem(50) rem(14) rem(40);
         border-radius: rem(8);
+        background-position: rem(14) center;
+        background-size: rem(20);
+    }
+
+    &__button {
+        --sizeSubmitButtonIcon: #{rem(30)};
+        @include square(var(--sizeSubmitButtonIcon));
+
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        translate: 0 -50%;
+        background: url('../../icons/airfly-submit-icon_white.svg') center / cover no-repeat;
+        background-color: transparent;
+        border: none;
+
+        @include laptop {
+            --sizeSubmitButtonIcon: #{rem(24)};
+        }
     }
 }
 
-//Доделать input
 //Добавить область нажатия для бургер кнопки

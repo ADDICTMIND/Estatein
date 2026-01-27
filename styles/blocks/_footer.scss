@@ -2,23 +2,29 @@
 
 .footer {
     &__body {
-        display: grid;
-        grid-template-columns: 33.7% auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
         column-gap: rem(30);
         padding-block: rem(100);
     }
 
     &__home {
-        display: flex;
+        display: inline-flex;
+        width: 100%;
+        max-width: rem(538);
         flex-direction: column;
-        align-items: start;
         row-gap: rem(30);
     }
 
     &__menu {
         display: flex;
         justify-content: space-between;
-        align-items: start;
         column-gap: rem(100.25);
+    }
+
+    &__form {
+        max-width: rem(423);
+        position: relative;
     }
 }
