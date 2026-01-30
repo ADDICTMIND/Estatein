@@ -1,0 +1,69 @@
+@use '../helpers/' as *;
+
+.hero {
+    overflow-x: hidden;
+
+    &__main {
+        display: flex;
+        column-gap: rem(80);
+
+        @include laptop {
+            column-gap: rem(40);
+        }
+    }
+
+    &__content {
+        flex: 0 0 100%;
+    }
+
+    &__buttons {
+        display: flex;
+        column-gap: rem(20);
+
+        @include laptop {
+            column-gap: rem(16);
+        }
+    }
+
+    &__body {
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            row-gap: fluid(60, 40);
+            width: 50%;
+            padding-block: fluid(144, 40);
+        }
+
+        &-title {
+            display: flex;
+            flex-direction: column;
+            row-gap: fluid(24, 16);
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            row-gap: fluid(60, 40);
+        }
+    }
+
+    &__image {
+        position: relative;
+        flex: 0 0 50%;
+        translate: -100% 0;
+
+        &-building {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+
+    &__circle {
+        position: absolute;
+        display: none;
+    }
+}

@@ -1,0 +1,42 @@
+@use '../helpers/' as *;
+
+.soc1als {
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: rem(24);
+
+        @include laptop {
+            column-gap: rem(10);
+        }
+
+        @include mobile {
+            column-gap: rem(8);
+        }
+    }
+
+    &__link {
+        background-color: var(--color-grey-08);
+        padding: rem(14);
+        border-radius: 50%;
+        color: var(--color-light);
+
+        @include laptop {
+            padding: rem(10);
+        }
+
+        @include mobile {
+            padding: rem(20);
+        }
+
+        & svg {
+            --sizeIconsSoc1als: #{rem(24)};
+
+            @include square(var(--sizeIconsSoc1als));
+
+            @include laptop {
+                --sizeIconsSoc1als: #{rem(20)};
+            }
+        }
+    }
+}

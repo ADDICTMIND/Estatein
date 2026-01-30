@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Estatein</title>
+    <script src="./scripts/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+
+    <header class="header" data-js-header>
+        <div class="header__promo is-active" data-js-header-promo>
+            <div class="header__promo-inner">
+                <div class="header__promo-info">
+                    <span class="header__promo-description">
+                        Discover Your Dream Property with Estatein
+                    </span>
+                    <a href="/" class="header__promo-link">
+                        <div class="header__promo-link-learn">
+                            Learn More
+                        </div>
+                    </a>
+                </div>
+                <button 
+                    class="header__promo-close-button close-button"
+                    type="button"
+                    aria-label="Close promo menu"
+                    title="Close promo menu"
+                    data-js-header-promo-close
+                >
+                    <span class="close-button__line"></span>
+                    <span class="close-button__line"></span>
+                </button>
+            </div>
+        </div>
+        <div class="header__body">
+            <div class="header__body-inner container">
+                <a 
+                    class="header__logo logo" 
+                    href="/"
+                    aria-label="Home"
+                    title="Home"
+                >
+                    <img 
+                        class="logo__image" 
+                        src="./images/logo.svg"
+                        alt="Estatein"
+                        width="160" height="48"
+                    />
+                </a>
+                <div class="header__overlay" data-js-header-overlay>
+                    <nav class="header__menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">
+                                <a href="/" class="header__menu-link is-active">Home</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="/" class="header__menu-link">About Us</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="/" class="header__menu-link">Properties</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="/" class="header__menu-link">Services</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a 
+                        class="header__contact-us-link button button--grey button--grey-08"
+                        href=""
+                    >
+                        Contact Us
+                    </a>
+                </div>
+                <button 
+                    class="header__burger-button burger-button visible-mobile"
+                    type="button"
+                    aria-label="Open menu"
+                    title="Open menu"
+                    data-js-header-burger-button
+                >
+                    <span class="burger-button__line"></span>
+                    <span class="burger-button__line"></span>
+                    <span class="burger-button__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<section class="section">
+  <div class="section__content">
+    <div class="section__container container">
+      <div class="section__container-inner">
+        <div class="hero__body-info">
+            <div class="hero__body-title">
+                <h1 class="hero-title" id="hero-title">Discover Your Dream Property with Estatein</h1>
+                <div class="hero__description">
+                    <p>Your journey to finding the perfect property begins here. Explore our listings to find the home that matches your dreams.</p>
+                </div>
+            </div>
+            <div class="hero__buttons">
+                <a href="" class="hero__buttons-more button button--grey">Learn More</a>
+                <a href="" class="hero__buttons-browse button">Browse Properties</a>
+            </div>
+        </div>
+        <div class="hero__metrics metrics">
+            <dl class="metrics__list">
+                <div class="metrics__item tile">
+                    <dt class="metrics__key">Happy Customers</dt>
+                    <dd class="mtrics__vallue h3">200+</dd>
+                </div>
+                <div class="metrics__item tile">
+                    <dt class="metrics__key">Properties For Clients</dt>
+                    <dd class="mtrics__vallue h3">10k+</dd>
+                </div>
+                <div class="metrics__item tile">
+                    <dt class="metrics__key">Years of Experience</dt>
+                    <dd class="mtrics__vallue h3">16+</dd>
+                </div>
+            </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section__image">
+      <img 
+          class="hero__building-image" 
+          src="./images/hero/bulding-bg-block.png" 
+          alt=""
+      />
+  </div>
+</section>
+
+
+
+
+
+
+
+
+    <!-- <svg class="circle" viewBox="0 0 100 100">
+  <path id="circle" d="M 0,50 a 50,50 0 1,1 0,1 z" />
+  <text>
+    <textPath xlink:href="#circle">
+      ✨Discover Your Dream Property with Estatein
+    </textPath>
+  </text>
+</svg> -->
+</body>
+</html>
+

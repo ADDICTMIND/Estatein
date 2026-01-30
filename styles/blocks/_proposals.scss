@@ -1,0 +1,38 @@
+@use '../helpers/' as *;
+
+.proposals {
+    border: var(--border);
+    padding: rem(20);
+    box-shadow: 0 0 0 rem(10) #191919;
+
+    @include laptop {
+        padding: rem(10);
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(20);
+
+        @include laptop {
+            gap: rem(10);
+        }
+    }
+
+    &__item {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        padding: fluid(142, 82) fluid(20, 14) fluid(40, 20);
+    }
+
+    &__link {
+        color: var(--color-light);
+    }
+
+    &__icon {
+        position: absolute;
+        top: rem(20);
+        left: 90%;
+    }
+}

@@ -32,6 +32,14 @@ class Header {
 
     onPromoCloseButtonClick = () => {
         this.promoElement.classList.remove(this.stateClasses.isActive)
+
+        this.promoElement.addEventListener(
+            'transitionend',
+            () => {
+                this.promoElement.style.display = 'none'
+            },
+            { once: true }
+        )
     }
 
     bindEvents() {

@@ -14,11 +14,12 @@
 
 @use 'blocks/input';
 @use 'blocks/footer';
+@use 'blocks/soc1als';
+
+@use 'blocks/tile';
+@use 'blocks/metrics';
+@use 'blocks/circle';
+@use 'blocks/proposals';
+@use 'blocks/hero';
 
 
-// .header,
-// main > *:not(:last-child)
-// // .footer 
-// {
-//     display: none !important;
-// }

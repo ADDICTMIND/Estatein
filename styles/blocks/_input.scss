@@ -2,7 +2,6 @@
 
 .input {
     width: 100%;
-    max-width: rem(423);
     padding: rem(18) rem(64) rem(18) rem(34);
     background-color: transparent;
     border: var(--border);
@@ -20,7 +19,6 @@
 
         @include laptop {
             font-size: rem(14);
-            padding-left: rem(20);
         }
     }
 

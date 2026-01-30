@@ -34,3 +34,10 @@
         --container-width: #{rem(1280)};
     }
 }
+
+// .header,
+// main > *:not(:last-child),
+.footer 
+{
+    display: none !important;
+}

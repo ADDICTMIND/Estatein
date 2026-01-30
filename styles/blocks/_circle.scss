@@ -1,0 +1,22 @@
+@use '../helpers/' as *;
+
+.circle {
+    @include square(rem(200));
+
+    background-color: rgba(255 0 0 / 0.5);
+    border-radius: 50%;
+    border: var(--border);
+}
+
+.circle__transparent {
+  display: block;
+  overflow: visible;
+  width: rem(140);
+  font-size: rem(11);
+  letter-spacing: rem(1.6);
+  fill: var(--color-light);
+}
+
+.circle path {
+    fill: none;
+}
