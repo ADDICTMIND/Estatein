@@ -21,9 +21,38 @@
 
     &__item {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
+        row-gap: fluid(20, 14);
         width: 100%;
-        padding: fluid(142, 82) fluid(20, 14) fluid(40, 20);
+        padding: rem(40) rem(20);
+
+        @include laptop {
+            padding: rem(30) rem(16);
+        }
+
+        @include mobile {
+            padding: rem(20) rem(14);
+        }
+    }
+
+    &__image {
+        // --sizeImageProposals: rem(82);
+
+        // @include square(var(--sizeImageProposals));
+
+        // @include laptop {
+        //     --sizeImageProposals: rem(60);
+        // }
+
+        // @include laptop {
+        //     --sizeImageProposals: rem(48);
+        // }
+        width: fluid(82, 48);
+        height: fluid(82, 48);
     }
 
     &__link {
@@ -31,8 +60,16 @@
     }
 
     &__icon {
+        --sizeIconProposalsArrow: #{rem(34)};
+
+        @include square(var(--sizeIconProposalsArrow));
+
         position: absolute;
-        top: rem(20);
-        left: 90%;
+        top: 10%;
+        left: 85%;
+
+        @include laptop {
+            --sizeIconProposalsArrow: #{rem(26)};
+        }
     }
 }

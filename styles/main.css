@@ -1039,17 +1039,44 @@ a :focus-visible {
 }
 .proposals__item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  row-gap: clamp(0.875rem, 0.7794117647rem + 0.3921568627vw, 1.25rem);
   width: 100%;
-  padding: clamp(5.125rem, 4.1691176471rem + 3.9215686275vw, 8.875rem) clamp(0.875rem, 0.7794117647rem + 0.3921568627vw, 1.25rem) clamp(1.25rem, 0.931372549rem + 1.3071895425vw, 2.5rem);
+  padding: 2.5rem 1.25rem;
+}
+@media (width <= 90.06125rem) {
+  .proposals__item {
+    padding: 1.875rem 1rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .proposals__item {
+    padding: 1.25rem 0.875rem;
+  }
+}
+.proposals__image {
+  width: clamp(3rem, 2.4583333333rem + 2.2222222222vw, 5.125rem);
+  height: clamp(3rem, 2.4583333333rem + 2.2222222222vw, 5.125rem);
 }
 .proposals__link {
   color: var(--color-light);
 }
 .proposals__icon {
+  --sizeIconProposalsArrow: 2.125rem;
+  width: var(--sizeIconProposalsArrow);
+  height: var(--sizeIconProposalsArrow);
   position: absolute;
-  top: 1.25rem;
-  left: 90%;
+  top: 10%;
+  left: 85%;
+}
+@media (width <= 90.06125rem) {
+  .proposals__icon {
+    --sizeIconProposalsArrow: 1.625rem;
+  }
 }
 
 .hero {
@@ -1105,6 +1132,11 @@ a :focus-visible {
   top: 0;
   left: 0;
   object-fit: cover;
+}
+@media (width > 120.06125rem) {
+  .hero__image-building {
+    object-position: 0 0;
+  }
 }
 .hero__circle {
   position: absolute;
