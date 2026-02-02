@@ -9,20 +9,33 @@
         @include laptop {
             column-gap: rem(16);
         }
+
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: rem(12);
+        }
     }
 
     &__item {
         display: flex;
+        align-items: start;
         flex-direction: column-reverse;
         row-gap: rem(2);
         padding: rem(16) rem(24);
+        width: 100%;
 
         @include laptop {
-            padding: rem(14) rem(20);
+            padding: rem(14) rem(10);
+            align-items: center;
         }
 
-        @include laptop {
+        @include tablet {
             padding: rem(16) rem(16);
+        }
+
+        &:last-child {
+            grid-column: 1 / -1;
         }
     }
 }

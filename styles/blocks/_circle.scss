@@ -1,22 +1,45 @@
 @use '../helpers/' as *;
 
 .circle {
-    @include square(rem(200));
+  position: relative;
 
-    background-color: rgba(255 0 0 / 0.5);
-    border-radius: 50%;
-    border: var(--border);
-}
+  @include square(rem(175));
 
-.circle__transparent {
-  display: block;
-  overflow: visible;
-  width: rem(140);
-  font-size: rem(11);
-  letter-spacing: rem(1.6);
-  fill: var(--color-light);
-}
+  background-color: var(--color-grey-08);
+  border-radius: 50%;
+  border: var(--border);
 
-.circle path {
+  &__transparent {
+    @include abs-center;
+
+    position: absolute;
+    display: block;
+    overflow: visible;
+    width: fluid(140, 130);
+    font-size: rem(12);
+    letter-spacing: rem(1.6);
+    fill: var(--color-light);
+    padding: rem(16);
+
+    @include mobile {
+      width: rem(120);
+    }
+  }
+
+  & path {
     fill: none;
+  }
+
+  &__link {
+    @include abs-center;
+
+    position: absolute;
+    border-radius: 50%;
+    padding: rem(14);
+
+    & svg {
+      width: fluid(34, 21);
+      height: fluid(34, 21);
+    }
+  }
 }

@@ -2,6 +2,11 @@
 
 .hero {
     overflow-x: hidden;
+    position: relative;
+
+    @include tablet {
+        padding-top: rem(40);
+    }
 
     &__main {
         display: flex;
@@ -10,28 +15,52 @@
         @include laptop {
             column-gap: rem(40);
         }
+
+        @include tablet {
+            flex-direction: column-reverse;
+            align-items: start;
+            justify-content: space-between;
+        }
     }
 
     &__content {
-        flex: 0 0 100%;
+        @include tablet-above {
+            flex: 0 0 100%;
+        }
     }
 
     &__buttons {
         display: flex;
         column-gap: rem(20);
+        width: 100%;
 
         @include laptop {
             column-gap: rem(16);
+        }
+
+        @include tablet {
+            flex-direction: column;
+            row-gap: rem(16);
+            max-width: rem(358);
         }
     }
 
     &__body {
         &-inner {
-            display: flex;
-            flex-direction: column;
-            row-gap: fluid(60, 40);
-            width: 50%;
-            padding-block: fluid(144, 40);
+            @include tablet-above {
+                display: flex;
+                flex-direction: column;
+                row-gap: fluid(60, 40);
+                width: 50%;
+                padding-block: fluid(144, 40);
+            }
+
+            @include tablet {
+                padding-block: rem(60) rem(40);
+                display: flex;
+                flex-direction: column;
+                row-gap: rem(40);
+            }
         }
 
         &-title {
@@ -48,26 +77,68 @@
     }
 
     &__image {
-        position: relative;
-        flex: 0 0 50%;
-        translate: -100% 0;
+        @include tablet-above {
+            position: relative;
+            flex: 0 0 50%;
+            translate: -100% 0;
 
-        &-building { // img.hero__image-bulding
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            object-fit: cover;
+            &-building { // img.hero__image-bulding
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
 
-            @include desktop-above {
-                object-position: 0 0;
+                @include desktop-above {
+                    object-position: 0 0;
+                }
+            }
+        }
+
+        &-building {
+            @include tablet {
+                border-radius: rem(12);
+                border: var(--border);
+                width: 100%;
+                max-width: rem(800);
             }
         }
     }
 
     &__circle {
         position: absolute;
-        display: none;
+        top: 20%;
+        left: 55%;
+        translate: -50% -50%;
+
+        @include desktop-above {
+            top: 22%;
+            left: 54%;
+        }
+
+        @include laptop {
+            width: rem(160);
+            height: rem(160);
+            top: 39%;
+            left: 53%;
+        }
+
+        @include tablet {
+            top: 45%;
+            left: 10%;
+        }
+
+        @include mobile {
+            width: rem(130);
+            height: rem(130);
+            top: fluid(1800, 330);
+            left: 15%;
+        }
+
+        @include mobile-s {
+            top: fluid(900, 350);
+            left: 18%;
+        }
     }
 }
